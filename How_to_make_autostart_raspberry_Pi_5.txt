@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=AHU_exam
+Exec=/home/pi/pyProgram/Miernik_mocy/AHU_exam.sh
+Terminal=true
+
+
+ # path --->>>   /home/pi/.config/autostart/start.desktop
+ # This code above can automatically run ( after boot ) script in Raspberry Pi 5
