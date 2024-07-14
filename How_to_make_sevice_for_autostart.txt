@@ -1,0 +1,26 @@
+#  GNU nano 7.2           /etc/systemd/system/sample.service      - ścieżka dostępu
+[Unit]
+Description=GUI Start
+After=graphical.target
+Wants=graphical.target
+
+[Service]
+User=pi
+Group=pi
+Environment="DISPLAY=:0.0"
+Environment="XAUTHORITY=/home/pi/.Xauthority"
+#ExecStartPre=/usr/bin/printenv
+ExecStart=/usr/bin/python3 /home/pi/pyProgram/Miernik_mocy/AHU_exam.py
+
+
+[Install]
+WantedBy=graphical.target
+# sudo systemctl daemon-reload
+# sudo systemctl enable name-of-your-service.service
+sudo systemctl disable name-of-your-service.service
+# sudo systemctl start name-of-your-service.service
+#sudo systemctl status name-of-your-service.service
+
+#https://www.thedigitalpictureframe.com/ultimate-guide-systemd-autostart-scripts-raspberry-pi/
+
+
